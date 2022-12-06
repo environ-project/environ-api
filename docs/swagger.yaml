@@ -1,0 +1,36 @@
+definitions:
+  main.MessageResponse:
+    properties:
+      message:
+        type: string
+    type: object
+host: mark.dev.tjlabscorp.com:8080
+info:
+  contact:
+    email: kghnkl0103@gmail.com
+    name: Environ
+  description: This is a Environ server.
+  title: Environ Server API
+  version: "0.1"
+paths:
+  /:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.MessageResponse'
+      summary: Index
+  /ping:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.MessageResponse'
+      summary: PingPong
+swagger: "2.0"
